@@ -1,0 +1,21 @@
+<div class="w-full flex flex-col gap-5 items-center">
+    <h2 class="text-2xl text-bold">Поиск по треку</h2>
+
+    <div>
+        <div class="flex">
+            <input type="text" [(ngModel)]="track" class='outline outline-blue-500 p-3 rounded-l'/>
+            <button (click)="submit()" class="outline outline-blue-500 bg-blue-500 rounded-r p-3 text-white">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                      </svg>
+                </div>
+            </button>
+        </div>
+        <label for="track">Введите трек номер</label>
+    </div>
+   
+    <div class="w-full" *ngIf="trackData"> 
+        <app-track-info [trackData]="trackData"></app-track-info>
+    </div>
+</div>
