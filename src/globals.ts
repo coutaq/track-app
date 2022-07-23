@@ -1,3 +1,3 @@
 'use strict';
 
-export const API_URL='http://185.199.9.125:8181';
+export const API_URL='https://trackbot-mostalk.herokuapp.com/';

@@ -25,7 +25,7 @@
             <span>
                 <span class="text-slate-400">Местоположение: </span> {{trackData.city}}
             </span>
-            <span>
+            <span *ngIf="trackData.weight">
                 <span class="text-slate-400">Вес: </span> {{trackData.weight}}
             </span>
         </div>

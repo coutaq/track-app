@@ -10,13 +10,15 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {MarkdownModule, MarkdownService} from 'ngx-markdown';
 import { TrackInfoComponent } from './track-info/track-info.component';
 import { AuthorizeComponent } from './authorize/authorize.component';
+import { HeaderComponent } from './header/header.component';
 // import {AngularTelegramLoginWidgetModule} from 'angular'
 @NgModule({
   declarations: [
     AppComponent,
     SearchTrackComponent,
     TrackInfoComponent,
-    AuthorizeComponent
+    AuthorizeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
