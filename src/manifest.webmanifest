@@ -1,12 +1,12 @@
 {
-  "id": "0.0.2",
+  "id": "0.0.3",
   "name": "ТрекБот",
   "short_name": "track-app",
   "theme_color": "#4fd344",
   "background_color": "#fff",
   "display": "fullscreen",
   "scope": "./",
-  "start_url": ".//",
+  "start_url": "./",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
