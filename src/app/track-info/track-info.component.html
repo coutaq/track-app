@@ -1,7 +1,8 @@
 <div class="w-full flex flex-col " *ngIf="trackData">
   <div class="max-w-5xl mx-auto w-full border text-slate-800">
       <div class="w-full flex flex-col p-4">
-        <h2 class="w-full my-4 text-3xl font-bold text-slate-800">Трек {{ trackData.track }}</h2>
+        <h2 *ngIf="!trackData.desc" class="w-full my-4 text-3xl font-bold text-slate-800">Трек {{ trackData.track }}</h2>
+        <h2 *ngIf="trackData.desc" class="w-full my-4 text-3xl font-bold text-slate-800">{{ trackData.desc }}</h2>
         <div class="flex justify-between w-full content-end">
             <span class="font-bold">
                 {{trackData.status}}
