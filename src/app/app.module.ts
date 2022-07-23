@@ -1,5 +1,5 @@
 // import { HttpClient } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule,NgZone} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +31,7 @@ import { TelegramLoginService } from './telegram-login.service';
     MarkdownModule.forRoot(),
     
   ],
-  providers: [HttpClientModule, TelegramLoginService],
+  providers: [HttpClientModule, TelegramLoginService,NgZone],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
