@@ -16,12 +16,12 @@ export class TelegramLoginService {
     return this.isAuth
   }
 
-  constructor(){
-    (window as any)['loginViaTelegram'] = (loginData:TelegramLoginData) => this.loginViaTelegram(loginData);
+  constructor(ngZone:NgZone){
+    (window as any)['loginViaTelegram'] = (loginData:TelegramLoginData) => this.loginViaTelegram(loginData, ngZone);
   }
 
   private loginViaTelegram(loginData: TelegramLoginData, ngZone:NgZone) {
-    this.ngZone.run(() => {
+    ngZone.run<void>(() => {
       console.log('Logged in as ' + loginData.first_name + ' ' + loginData.last_name + ' (' + loginData.id + (loginData.username ? ', @' + loginData.username : '') + ')');
       if(loginData.id){
         this.user = {...loginData}

@@ -31,7 +31,7 @@ import { TelegramLoginService } from './telegram-login.service';
     MarkdownModule.forRoot(),
     
   ],
-  providers: [HttpClientModule, TelegramLoginService,NgZone],
+  providers: [HttpClientModule, TelegramLoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
