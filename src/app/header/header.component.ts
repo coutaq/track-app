@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TelegramLoginService } from '../telegram-login.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  telegramLoginService:TelegramLoginService
+  constructor(telegramLoginService:TelegramLoginService) { 
+    this.telegramLoginService = telegramLoginService
+  }
 
   ngOnInit(): void {
   }
