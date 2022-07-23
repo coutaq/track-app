@@ -8,10 +8,10 @@ import { Component, AfterViewInit, ElementRef,ViewChild } from '@angular/core';
 export class TelegramLoginWidgetComponent implements AfterViewInit {
 
   @ViewChild('script', {static: true}) 
-  script: ElementRef|null = null;
+  script: ElementRef;
 
   convertToScript() {
-    const element = this.script!.nativeElement;
+    const element = this.script.nativeElement;
     const script = document.createElement('script');
     script.src = 'https://telegram.org/js/telegram-widget.js?19';
     script.setAttribute('data-telegram-login', 'testpd_bot');
