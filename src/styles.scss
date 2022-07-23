@@ -30,6 +30,7 @@ body {
 }
 .scrollable{
   background-color: green;
+  touch-action: pan-y;
   & > *{
     background-color: red;
     touch-action: pan-y;
