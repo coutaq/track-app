@@ -1,4 +1,4 @@
 <div class="w-full flex flex-col align-center gap-6">
-    <span class="uppercase font-bold text-xl text-center">{{this.telegramLoginService.getUser().first_name}}, ваши треки</span>
+    <span class="uppercase font-bold text-xl text-center">{{this.telegramLoginService.getUser().first_name}}, ваши треки:</span>
     <app-track-info *ngFor="let track of this.tracks " [trackData]="track"></app-track-info>
 </div>
