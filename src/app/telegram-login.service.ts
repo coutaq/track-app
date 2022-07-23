@@ -36,7 +36,7 @@ export class TelegramLoginService {
     if(!this.getIsAuth()){
       ngZone.run<void>(() => {
         console.log('Logged in as ' + loginData.first_name + ' ' + loginData.last_name + ' (' + loginData.id + (loginData.username ? ', @' + loginData.username : '') + ')');
-        console.log(loginData.hash)
+        console.log(loginData)
         if(loginData.id){
           this.user = {...loginData}
           this.storage.set('user', this.user).subscribe(() => {});
