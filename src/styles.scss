@@ -25,7 +25,12 @@ body {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; 
   }
-
+*{
+  touch-action: none;
+}
 .scrollable{
-  touch-action: pan-y;
+  & > *{
+    background-color: red;
+    touch-action: pan-y;
+  }
 }
