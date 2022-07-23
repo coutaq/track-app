@@ -5,9 +5,6 @@
     Вы не авторизованы!
 </div> -->
 
-<div class="w-full flex flex-col align-center gap-6 scrollable">
-    <!-- <span *ngFor="let track of this.tracks">
-            {{track.status}}
-    </span> -->
-    <app-track-info *ngFor="let track of this.tracks" [trackData]="track"></app-track-info>
+<div class="w-full flex flex-col align-center gap-6">
+    <app-track-info *ngFor="let track of this.tracks scrollable" [trackData]="track"></app-track-info>
 </div>
