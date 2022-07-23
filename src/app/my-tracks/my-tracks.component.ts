@@ -13,7 +13,6 @@ export class MyTracksComponent implements OnInit {
   telegramLoginService:TelegramLoginService
   trackService:TrackServiceService
   tracks:TrackData[] = [];
-  user_id:String = '256450715'
   constructor(telegramLoginService:TelegramLoginService, trackService: TrackServiceService) { 
     this.telegramLoginService = telegramLoginService
     this.trackService = trackService
@@ -21,7 +20,7 @@ export class MyTracksComponent implements OnInit {
 
   ngOnInit(){
     if(this.telegramLoginService.getIsAuth() || 1){
-      this.trackService.getTracks(this.user_id).then((res)=>{
+      this.trackService.getTracks(this.telegramLoginService.getUser().id).then((res)=>{
         res.subscribe((data: [TrackData]) => {
           console.log(data)
           this.tracks = data
