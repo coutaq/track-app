@@ -29,10 +29,8 @@ body {
   touch-action: none;
 }
 .scrollable{
-  background-color: green;
   touch-action: pan-y!important;
   & *{
-    background-color: blueviolet;
     touch-action: pan-y!important;
   }
 }
