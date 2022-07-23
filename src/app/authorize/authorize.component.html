@@ -1,8 +1,7 @@
-<div *ngIf="!this.telegramLoginService.getIsAuth()">
+<div *ngIf="!this.telegramLoginService.getUser()">
     <app-telegram-login-widget></app-telegram-login-widget>
 </div>
-<div *ngIf="this.telegramLoginService.getIsAuth()">
-    <span>{{this.telegramLoginService.getUser().first_name}}</span>
-<span>ваши треки</span>
+<div *ngIf="this.telegramLoginService.getUser()">
+<span>{{this.telegramLoginService.getUser().first_name}}, ваши треки</span>
    <app-my-tracks></app-my-tracks>
 </div>
