@@ -11,6 +11,7 @@ import {MarkdownModule, MarkdownService} from 'ngx-markdown';
 import { TrackInfoComponent } from './track-info/track-info.component';
 import { AuthorizeComponent } from './authorize/authorize.component';
 import { HeaderComponent } from './header/header.component';
+import { TelegramLoginWidgetComponent } from './telegram-login-widget/telegram-login-widget.component';
 // import {AngularTelegramLoginWidgetModule} from 'angular'
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     SearchTrackComponent,
     TrackInfoComponent,
     AuthorizeComponent,
-    HeaderComponent
+    HeaderComponent,
+    TelegramLoginWidgetComponent
   ],
   imports: [
     BrowserModule,
