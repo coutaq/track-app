@@ -6,7 +6,7 @@
   "background_color": "#ffffff",
   "display": "fullscreen",
   "scope": "./",
-  "start_url": ".//",
+  "start_url": "./search-track",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
