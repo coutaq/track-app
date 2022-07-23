@@ -3,4 +3,5 @@ export interface TelegramLoginData {
     last_name: string
     id: string
     username: string
+    hash:string
 }

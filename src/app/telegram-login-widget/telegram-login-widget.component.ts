@@ -17,7 +17,7 @@ export class TelegramLoginWidgetComponent implements AfterViewInit {
     script.setAttribute('data-telegram-login', 'testpd_bot');
     script.setAttribute('data-size', 'large');
     // Callback function in global scope
-    script.setAttribute('data-auth-url', 'https://trackbot-mostalk.herokuapp.com/check');
+    script.setAttribute('data-onauth', 'loginViaTelegram(user)');
     script.setAttribute('data-request-access', 'write');
     element.parentElement.replaceChild(script, element);
   }
