@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./authorize.component.scss']
 })
 export class AuthorizeComponent implements OnInit {
-
-  constructor(telegramLoginService:TelegramLoginService) {
-    telegramLoginService.init();
-   }
+  // private isAuth:boolean = false;
+  telegramLoginService:TelegramLoginService
+  constructor(private telegramLoginSer:TelegramLoginService) {
+    this.telegramLoginService = telegramLoginSer
+  }
 
   ngOnInit(): void {
   }

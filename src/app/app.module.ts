@@ -13,6 +13,7 @@ import { AuthorizeComponent } from './authorize/authorize.component';
 import { HeaderComponent } from './header/header.component';
 import { TelegramLoginWidgetComponent } from './telegram-login-widget/telegram-login-widget.component';
 // import {AngularTelegramLoginWidgetModule} from 'angular'
+import { TelegramLoginService } from './telegram-login.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { TelegramLoginWidgetComponent } from './telegram-login-widget/telegram-l
     MarkdownModule.forRoot(),
     
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, TelegramLoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

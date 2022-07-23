@@ -1,2 +1,6 @@
-<p>authorize works!</p>
-<app-telegram-login-widget></app-telegram-login-widget>
+<div *ngIf="!this.telegramLoginService.getIsAuth()">
+    <app-telegram-login-widget></app-telegram-login-widget>
+</div>
+<div *ngIf="this.telegramLoginService.getIsAuth()">
+    Auth!
+</div>
