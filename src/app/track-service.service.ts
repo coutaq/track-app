@@ -19,4 +19,13 @@ export class TrackServiceService {
     return req
     // return ""; 
   }
+
+  async getTracks(id:String) { 
+    // let track;
+    let req = this.http.get<[TrackData]>(API_URL+"my?id="+id)
+    
+    // console.log('track',track)
+    return req
+    // return ""; 
+  }
 }

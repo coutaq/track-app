@@ -1,0 +1,13 @@
+<!-- <div *ngIf="this.telegramLoginService.getIsAuth()">
+    <app-telegram-login-widget></app-telegram-login-widget>
+</div>
+<div *ngIf="!this.telegramLoginService.getIsAuth()">
+    Вы не авторизованы!
+</div> -->
+
+<div class="w-full flex flex-col align-center gap-6">
+    <!-- <span *ngFor="let track of this.tracks">
+            {{track.status}}
+    </span> -->
+    <app-track-info *ngFor="let track of this.tracks" [trackData]="track"></app-track-info>
+</div>

@@ -1,10 +1,10 @@
-<div class="sticky b-0 flex w-full h-40 bg-blue-700 justify-between items-center gap-8 px-8 text-white text-xl">
+<div class=" flex w-full h-20 bg-blue-700 justify-between items-center gap-8 px-8 text-white text-xl">
     <a class="button" routerLink="/search-track">Поиск по треку</a> 
     <div *ngIf="!this.telegramLoginService.getIsAuth()">
       <a class="button" routerLink="/authorize">Авторизоваться</a> 
   </div>
   <div *ngIf="this.telegramLoginService.getIsAuth()">
-      {{this.telegramLoginService.getUser().first_name}}
+    <a class="button" routerLink="/my-tracks">Мои треки</a>
   </div>
   
   </div>

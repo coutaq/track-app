@@ -14,6 +14,9 @@ import { HeaderComponent } from './header/header.component';
 import { TelegramLoginWidgetComponent } from './telegram-login-widget/telegram-login-widget.component';
 // import {AngularTelegramLoginWidgetModule} from 'angular'
 import { TelegramLoginService } from './telegram-login.service';
+import { MyTracksComponent } from './my-tracks/my-tracks.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { TelegramLoginService } from './telegram-login.service';
     TrackInfoComponent,
     AuthorizeComponent,
     HeaderComponent,
-    TelegramLoginWidgetComponent
+    TelegramLoginWidgetComponent,
+    MyTracksComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,12 @@ import { TelegramLoginService } from './telegram-login.service';
     FormsModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
     
   ],
   providers: [HttpClientModule, TelegramLoginService],

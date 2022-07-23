@@ -11,6 +11,7 @@ export class TrackInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.trackData)
   }
 
 }
