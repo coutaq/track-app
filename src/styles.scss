@@ -30,9 +30,12 @@ body {
 }
 .scrollable{
   background-color: green;
-  touch-action: pan-y;
+  touch-action: pan-y!important;
   & > *{
     background-color: red;
-    touch-action: pan-y;
+    touch-action: pan-y!important;
+    & > *{
+      touch-action: pan-y;
+    }
   }
 }
