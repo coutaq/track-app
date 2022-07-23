@@ -1,8 +1,8 @@
 {
   "name": "ТрекБот",
   "short_name": "track-app",
-  "theme_color": "#344fd3",
-  "background_color": "#344fd3",
+  "theme_color": "#4fd344",
+  "background_color": "#fff",
   "display": "fullscreen",
   "scope": "./",
   "start_url": "./",
