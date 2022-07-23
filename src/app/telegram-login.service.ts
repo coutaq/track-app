@@ -6,7 +6,9 @@ import { TelegramLoginData } from './telegram-login-data';
 })
 export class TelegramLoginService {    
   init() {
+    
     (window as any)['loginViaTelegram'] = (loginData:TelegramLoginData) => this.loginViaTelegram(loginData);
+    console.log('asd')
   }
 
   private loginViaTelegram(loginData: TelegramLoginData) {

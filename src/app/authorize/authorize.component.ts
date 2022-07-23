@@ -1,3 +1,4 @@
+import { TelegramLoginService } from './../telegram-login.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorizeComponent implements OnInit {
 
-  constructor() { }
+  constructor(telegramLoginService:TelegramLoginService) {
+    telegramLoginService.init();
+   }
 
   ngOnInit(): void {
   }
