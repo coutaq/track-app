@@ -22,7 +22,12 @@ export class TelegramLoginService {
     this.storage = storage
     this.storage.get('user').subscribe((user) => {
       this.user = user as TelegramLoginData
-      this.isAuth = true
+      if(this.user){
+        this.isAuth = true
+      }else{
+        this.isAuth = false
+      }
+    
     });
     (window as any)['loginViaTelegram'] = (loginData:TelegramLoginData) => this.loginViaTelegram(loginData, ngZone);
   }
