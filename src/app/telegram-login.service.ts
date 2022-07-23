@@ -21,7 +21,8 @@ export class TelegramLoginService {
   constructor(ngZone:NgZone, storage: StorageMap){
     this.storage = storage
     this.storage.get('user').subscribe((user) => {
-      console.log(user);
+      this.user = user as TelegramLoginData
+      this.isAuth = true
     });
     (window as any)['loginViaTelegram'] = (loginData:TelegramLoginData) => this.loginViaTelegram(loginData, ngZone);
   }
