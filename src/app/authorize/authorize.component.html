@@ -2,6 +2,6 @@
     <app-telegram-login-widget></app-telegram-login-widget>
 </div>
 <div *ngIf="this.telegramLoginService.getUser()">
-<span>{{this.telegramLoginService.getUser().first_name}}, ваши треки</span>
+<span class="capitalize font-bold text-xl">{{this.telegramLoginService.getUser().first_name}}, ваши треки</span>
    <app-my-tracks></app-my-tracks>
 </div>
