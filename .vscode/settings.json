@@ -1,0 +1,35 @@
+{
+    "hidefiles.configurationType": "global",
+    "hidefiles.globalConfig": {
+        "profiles": [
+            {
+                "name": "Default",
+                "detail": "",
+                "description": "Test",
+                "hidden": [
+                    ".vscode/"
+                ]
+            },
+            {
+                "name": "Strict",
+                "detail": "Hide everything not immediately required",
+                "hidden": [
+                    "$Default"
+                ]
+            }
+        ]
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        ".vscode/": true,
+        "**.spec.ts": true,
+        ".angular/": true,
+        ".firebase/": true,
+        ".github/": true,
+        "src/app/my-tracks/my-tracks.component.spec.ts": true
+    }
+}
