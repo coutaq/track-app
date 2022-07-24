@@ -16,9 +16,6 @@ export class TelegramLoginService {
     return this.user
   }
 
-  getIsAuth(){
-    return this.isAuth
-  }
 
   constructor(ngZone:NgZone, storage: StorageMap, private http: HttpClient){
     this.storage = storage

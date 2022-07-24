@@ -2,16 +2,21 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './user';
+import { TelegramLoginService } from './telegram-login.service';
 
 @Injectable()
 export class AuthInterceptorService implements HttpInterceptor {
-
+  private telegramLoginService:TelegramLoginService
+  constructor(telegramLoginService:TelegramLoginService){
+    this.telegramLoginService = telegramLoginService
+  }
     intercept(req: HttpRequest<any>,
               next: HttpHandler): Observable<HttpEvent<any>> {
 
                 console.log("INTERCEPTED")
 
-        const user:User = {...JSON.parse(localStorage.getItem("user") as string)};
+                console.log()
+        const user = this.telegramLoginService.getUser()
 
         if (user) {
           console.log("USER:", user)
