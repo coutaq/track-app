@@ -35,6 +35,7 @@ export class TelegramLoginService {
 
   private loginViaTelegram(loginData: TelegramLoginData, ngZone:NgZone) {
     let req = this.http.post(API_URL+"auth", loginData)
+    console.log(loginData)
     console.log("AUTH!!!:"+req.subscribe())
     if(!this.getIsAuth()){
       ngZone.run<void>(() => {
