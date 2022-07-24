@@ -11,16 +11,20 @@ export class TelegramLoginService {
   private user:User
   private isAuth:boolean   
   private storage:StorageMap
+  private ngZone:NgZone
 
   getUser(){
     return this.user
   }
   clear(){
-    this.storage.clear()
+    this.ngZone.run<void>(() => {
+      this.storage.clear()
+    })
   }
 
   constructor(ngZone:NgZone, storage: StorageMap, private http: HttpClient){
     this.storage = storage
+    this.ngZone = ngZone
     this.storage.get('user').subscribe((user) => {
       this.user = user as User  
     });

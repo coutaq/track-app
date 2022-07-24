@@ -18,6 +18,7 @@ export class LogoutInterceptorService implements HttpInterceptor {
       catchError((requestError: HttpErrorResponse) => {
         console.log("INTERCEPTED RESPONSE")
         if (requestError && requestError.status === 401) {
+          
           this.telegramLoginService.clear();
           }
           return next.handle(request);
