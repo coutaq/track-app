@@ -13,13 +13,9 @@ export class AuthInterceptorService implements HttpInterceptor {
     intercept(req: HttpRequest<any>,
               next: HttpHandler): Observable<HttpEvent<any>> {
 
-                console.log("INTERCEPTED")
-
-                console.log()
         const user = this.telegramLoginService.getUser()
 
         if (user) {
-          console.log("USER:", user)
             const cloned = req.clone({
                 headers: req.headers.set("Authorization",
                     "Bearer " + user.auth_token)

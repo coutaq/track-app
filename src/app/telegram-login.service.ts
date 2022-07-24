@@ -15,7 +15,9 @@ export class TelegramLoginService {
   getUser(){
     return this.user
   }
-
+  clear(){
+    this.storage.clear()
+  }
 
   constructor(ngZone:NgZone, storage: StorageMap, private http: HttpClient){
     this.storage = storage
