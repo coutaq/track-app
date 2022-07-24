@@ -8,7 +8,7 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class TelegramLoginService { 
-  private user:User
+  private user:User|null
   private isAuth:boolean   
   private storage:StorageMap
   private ngZone:NgZone
@@ -17,8 +17,11 @@ export class TelegramLoginService {
     return this.user
   }
   clear(){
+    
     this.ngZone.run<void>(() => {
       this.storage.clear()
+      this.user = null
+      console.log('removed user')
     })
   }
 

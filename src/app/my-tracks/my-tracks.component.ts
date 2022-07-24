@@ -20,7 +20,7 @@ export class MyTracksComponent implements OnInit {
 
   ngOnInit(){
     if(this.telegramLoginService.getUser()){
-      this.trackService.getTracks(this.telegramLoginService.getUser().id).then((res)=>{
+      this.trackService.getTracks(this.telegramLoginService.getUser()!.id).then((res)=>{
         res.subscribe((data: [TrackData]) => {
           console.log(data)
           this.tracks = data
