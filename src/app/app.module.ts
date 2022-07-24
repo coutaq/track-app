@@ -17,6 +17,7 @@ import { TelegramLoginService } from './telegram-login.service';
 import { MyTracksComponent } from './my-tracks/my-tracks.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { httpInterceptorProviders } from './http-inteceptors/index';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { environment } from '../environments/environment';
     }),
     
   ],
-  providers: [HttpClientModule, TelegramLoginService],
+  providers: [HttpClientModule, TelegramLoginService, httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
