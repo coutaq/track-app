@@ -42,7 +42,9 @@ export class TelegramLoginService {
         form_data.append(key, loginData[key as keyof TelegramLoginData].toString());
     }
 
+    console.log("asdasd:",form_data)
     let req = this.http.post(API_URL+"auth", form_data)
+    
     console.log("AUTH!!!:"+req.subscribe())
     if(!this.getIsAuth()){
       ngZone.run<void>(() => {
