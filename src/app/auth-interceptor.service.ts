@@ -9,6 +9,8 @@ export class AuthInterceptorService implements HttpInterceptor {
     intercept(req: HttpRequest<any>,
               next: HttpHandler): Observable<HttpEvent<any>> {
 
+                console.log("INTERCEPTED")
+
         const user:User = {...JSON.parse(localStorage.getItem("user") as string)};
 
         if (user) {
