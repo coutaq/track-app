@@ -22,7 +22,20 @@ export class TrackServiceService {
 
   async getTracks(id:String) { 
     // let track;
-    let req = this.http.get<[TrackData]>(API_URL+"my?id="+id)
+    let req = this.http.get<[TrackData]>(API_URL+"my")
+    
+    // console.log('track',track)
+    return req
+    // return ""; 
+  }
+
+  async delete(trackData:TrackData) { 
+    // let track;
+    var form_data = new FormData();
+    form_data.append('track', trackData.track)
+    let req = this.http.post(API_URL+"remove-track", form_data).subscribe((res)=>{
+
+    })
     
     // console.log('track',track)
     return req
